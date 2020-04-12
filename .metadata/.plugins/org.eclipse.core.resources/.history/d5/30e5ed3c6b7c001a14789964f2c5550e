@@ -13,11 +13,4 @@
 	<bean id="person02" class="bean.Person">
 		<property name="name" value="jhkjhk"></property>
 	</bean>
-	
-	<bean id="person03" class="bean.Person">
-		<constructor-arg name="age" value="18"></constructor-arg>
-		<constructor-arg name="email" value="554854@163.com"></constructor-arg>
-		<constructor-arg name="gender" value="男"></constructor-arg>
-		<constructor-arg name="name" value="zdsf"></constructor-arg>
-	</bean>
 </beans>

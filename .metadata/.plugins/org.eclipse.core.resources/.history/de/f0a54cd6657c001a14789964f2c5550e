@@ -13,12 +13,8 @@ public class PersonTest {
 	public void test() {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("application.xml");
 		
-		Person person1 = applicationContext.getBean("person01", Person.class);
-		//Person person2 = applicationContext.getBean(Person.class);
-		Person person2 = (Person)applicationContext.getBean("person01");
-		System.out.println(person2);
+		Person person = (Person)applicationContext.getBean("person01");
+		System.out.println(person);
 	}
-	
-
 
 }
