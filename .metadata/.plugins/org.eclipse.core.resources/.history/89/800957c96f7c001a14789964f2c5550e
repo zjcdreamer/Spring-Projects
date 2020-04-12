@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person01" class="bean.Person">
+		<property name="name" value="zs"></property>
+		<property name="age" value="19"></property>
+		<property name="gender" value="男"></property>
+		<property name="email" value="8786376@qq.com"></property>
+	</bean>
+	
+	<bean id="person02" class="bean.Person">
+		<property name="name" value="jhkjhk"></property>
+	</bean>
+	
+	<bean id="person03" class="bean.Person">
+		<constructor-arg name="age" value="18"></constructor-arg>
+		<constructor-arg name="email" value="554854@163.com"></constructor-arg>
+		<constructor-arg name="gender" value="男"></constructor-arg>
+		<constructor-arg name="name" value="zdsf"></constructor-arg>
+	</bean>
+</beans>

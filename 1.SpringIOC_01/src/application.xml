@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+<!--  
 	<bean id="person01" class="bean.Person">
 		<property name="name" value="zs"></property>
 		<property name="age" value="19"></property>
@@ -20,4 +21,31 @@
 		<constructor-arg name="gender" value="男"></constructor-arg>
 		<constructor-arg name="name" value="zdsf"></constructor-arg>
 	</bean>
+	
+	<bean id="person04" class="bean.Person">
+		<constructor-arg value="18"></constructor-arg>
+		<constructor-arg value="12"></constructor-arg>
+		<constructor-arg value="男"></constructor-arg>
+		<constructor-arg value="zdsf"></constructor-arg>
+	</bean>
+	
+	<bean id="person05" class="bean.Person">
+		<constructor-arg value="18"></constructor-arg>
+		<constructor-arg value="16"></constructor-arg>
+		<constructor-arg value="zdsf" index="3"></constructor-arg>
+		<constructor-arg value="男" index="2"></constructor-arg>
+		
+	</bean>
+	
+	<bean id="person06" class="bean.Person">
+		<constructor-arg value="hh"></constructor-arg>
+		<constructor-arg value="17"></constructor-arg>
+		<constructor-arg value="zdsf" index="3" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="男" index="2" type="java.lang.String"></constructor-arg>
+	</bean>
+	
+	<bean id="person07" class="bean.Person" p:age="18" p:email="879564@163.com" p:gender="男" p:name="hjhkh">
+	</bean>
+	
+-->
 </beans>

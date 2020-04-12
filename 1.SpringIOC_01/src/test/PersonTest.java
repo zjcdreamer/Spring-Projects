@@ -15,10 +15,12 @@ public class PersonTest {
 		
 		Person person1 = applicationContext.getBean("person01", Person.class);
 		//Person person2 = applicationContext.getBean(Person.class);
-		Person person2 = (Person)applicationContext.getBean("person01");
-		System.out.println(person2);
+		Person person3 = (Person)applicationContext.getBean("person01");
+		System.out.println(person3);
+		Person person4 = (Person)applicationContext.getBean("person07");
+		System.out.println(person4);
 	}
 	
-
+	
 
 }

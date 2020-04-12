@@ -1,0 +1,17 @@
+package test;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import bean.Person;
+
+public class PersonTest02 {
+	
+	@Test
+	public void test01() {
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("application2.xml");
+		Person person = (Person)applicationContext.getBean("person01");
+		System.out.println(person);
+	}
+}

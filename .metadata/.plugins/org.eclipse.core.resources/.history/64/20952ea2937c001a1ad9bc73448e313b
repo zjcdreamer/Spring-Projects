@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="car01" class="bean.Car">
+		<property name="carName" value="宝马"></property>
+		<property name="color" value="白色"></property>
+		<property name="price" value="1111111111"></property>
+	</bean>
+	
+	<bean id="person01" class="bean.Person">
+		<property name="name">
+			<null/>
+		</property>
+		<property name="car" ref="car01"></property>
+	</bean>
+
+	<bean id="person02" class="bean.Person">
+		<property name="car">
+			<bean class="bean.Car">
+				<property name="carName" value="自行车"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="book01" class="bean.Book">
+		<property name="author" value="六小龄童"></property>
+		<property name="bookName" value="六学666"></property>
+	</bean>
+	
+	<bean id="person03" class="bean.Person">
+		<property name="books">
+			<list>
+				<bean class="bean.Book">
+					<property name="bookName" value="西游记"></property>
+					<property name="author" value="吴承恩"></property>
+				</bean>
+				<ref bean="book01"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="person04" class="bean.Person">
+		<property name="mpas">
+			<map>
+				<!-- 一个entry一个键值对 -->
+				<entry key="key01" value="hhh"></entry>
+				<entry key="key02" value-ref="car01"></entry>
+				<entry key="key03">
+					<map>
+						<entry key="key04" value="禁止套娃"></entry>
+					</map>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,26 @@
+package test;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import bean.Person;
+
+public class PersonTest02 {
+	
+	@Test
+	public void test01() {
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("application2.xml");
+		Person person = (Person)applicationContext.getBean("person01");
+		System.out.println(person);
+		
+		Person person2 = (Person)applicationContext.getBean("person02");
+		System.out.println(person2);
+		
+		Person person3 = (Person)applicationContext.getBean("person03");
+		System.out.println(person3);
+		
+		Person person4 = (Person)applicationContext.getBean("person03");
+		System.out.println(person4);
+	}
+}
